@@ -12,8 +12,8 @@ add_library(solution STATIC)
 target_sources(
 	solution
 	PRIVATE
-		src/solution.cpp
-		src/solution.h
+		"src/solution.cpp"
+		"src/solution.h"
 )
 
 
@@ -30,7 +30,7 @@ target_link_libraries(
 target_sources(
 	checker
 	PRIVATE
-		src/application.cpp
+		"src/application.cpp"
 )
 
 
@@ -51,25 +51,25 @@ list(APPEND CMAKE_MODULE_PATH ${catch2_SOURCE_DIR}/extras)
 
 
 # Executable target for the unit tests
-add_executable(testing)
+add_executable(unit-tests)
 
 target_link_libraries(
-	testing
+	unit-tests
 	PRIVATE
 		solution
 		Catch2::Catch2WithMain
 )
 
-target_include_directories(testing PRIVATE "src")
+target_include_directories(unit-tests PRIVATE "src")
 
 target_sources(
-	testing
+	unit-tests
 	PRIVATE
-		test/solution.cpp
+		"test/solution.cpp"
 )
 
 
 # Automatically register all tests
 include(CTest)
 include(Catch)
-catch_discover_tests(testing)
+catch_discover_tests(unit-tests)
