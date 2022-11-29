@@ -6,7 +6,18 @@
 
 `lectures/`::
 Код и бележки от лекциите.
-`group-N/`::
-Упражнения за група N.
-`templates/`::
-Шаблони за заданията в курса.
+`homework/`::
+Домашни към курса
+
+== Сваляне на хранилището
+
+За информация за това как да инсталирате https://git-scm.com/[Git] и да свалите хранилището, вижте например:
+
+* https://www.howtogeek.com/451360/how-to-clone-a-github-repository/[How to Clone a GitHub Repository] | How-To Geek
+
+Ако за първи път използвате Git, добър вариант може да бъде и https://desktop.github.com/[GitHub Desktop]:
+
+* https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop[Getting started with GitHub Desktop] | GitHub
+* https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop[Cloning and forking repositories from GitHub Desktop] | GitHub
+
+
