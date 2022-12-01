@@ -23,7 +23,7 @@ void checkWhetherNotEmpty(FixedSizeArray<T>& arr, size_t expectedSize)
 }
 
 
-SCENARIO("FixedSizeArray::FixedSizeArray() creates an empty object", "[FixedSizeArray]")
+SCENARIO("FixedSizeArray() creates an empty object", "[FixedSizeArray]")
 {
   GIVEN("A default-constructed FixedSizeArray object")
   {
@@ -37,7 +37,7 @@ SCENARIO("FixedSizeArray::FixedSizeArray() creates an empty object", "[FixedSize
   }
 }
 
-SCENARIO("FixedSizeArray::FixedArraySize(size_t N = 0) constructs an empty object", "[FixedSizeArray]")
+SCENARIO("FixedArraySize(size_t N = 0) constructs an empty object", "[FixedSizeArray]")
 {
   GIVEN("A FixedSizeArray object created with zero size")
   {
@@ -51,7 +51,7 @@ SCENARIO("FixedSizeArray::FixedArraySize(size_t N = 0) constructs an empty objec
   }
 }
 
-SCENARIO("FixedSizeArray::FixedArraySize(size_t N > 0) correctly constructs an object with the specified size", "[FixedSizeArray]")
+SCENARIO("FixedArraySize(size_t N > 0) correctly constructs an object with the specified size", "[FixedSizeArray]")
 {
   GIVEN("A FixedSizeArray object created with positive size")
   {
@@ -65,7 +65,7 @@ SCENARIO("FixedSizeArray::FixedArraySize(size_t N > 0) correctly constructs an o
   }
 }
 
-SCENARIO("FixedSizeArray::FixedSizeArray(size_t N > 0) throws when passed a size that does not fit in memory", "[FixedSizeArray]")
+SCENARIO("FixedSizeArray(size_t N > 0) throws when passed a size that does not fit in memory", "[FixedSizeArray]")
 {
   GIVEN("A size, which does not fit in the heap")
   {
@@ -79,7 +79,7 @@ SCENARIO("FixedSizeArray::FixedSizeArray(size_t N > 0) throws when passed a size
   }
 }
 
-SCENARIO("FixedSizeArray::FixedSizeArray(const FixedSizeArray&) throws when passed a size that does not fit in memory", "[FixedSizeArray]")
+SCENARIO("FixedSizeArray(const FixedSizeArray&) throws when passed a size that does not fit in memory", "[FixedSizeArray]")
 {
   //TODO Implement this test
 
@@ -354,7 +354,7 @@ SCENARIO("FixedSizeArray::fillFrom() copies the element of a shorter array witho
   }
 }
 
-SCENARIO("The contents of two arrays can be swapped", "[FixedSizeArray]")
+SCENARIO("FixedSizeArray: The contents of two arrays can be swapped", "[FixedSizeArray]")
 {
   GIVEN("Two arrays with different dimensions and elements")
   {

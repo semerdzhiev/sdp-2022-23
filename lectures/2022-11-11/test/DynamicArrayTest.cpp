@@ -24,13 +24,13 @@ void checkNotEmpty(DynamicArray<T>& arr, size_t expectedSize)
   CHECK(cref.data() == arr.data());
 }
 
-TEST_CASE("DynamicArray() constructs an empty array", "[DynamicArray]")
+TEST_CASE("DynamicArray::DynamicArray() constructs an empty array", "[DynamicArray]")
 {
   DynamicArray<int> obj;
   checkEmpty(obj);
 }
 
-TEST_CASE("DynamicArray(N=0) constructs an empty object", "[DynamicArray]")
+TEST_CASE("DynamicArray::DynamicArray(N=0) constructs an empty object", "[DynamicArray]")
 {
   DynamicArray<int> obj(0);
   checkEmpty(obj);
@@ -43,12 +43,12 @@ protected:
   const DynamicArray<size_t>& cref = arr;
 };
 
-TEST_CASE_METHOD(NonEmptyArrayFixture, "DynamicArray(N>0) constructs an object with correct size and capacity", "[DynamicArray]")
+TEST_CASE_METHOD(NonEmptyArrayFixture, "DynamicArray::DynamicArray(N>0) constructs an object with correct size and capacity", "[DynamicArray]")
 {
   checkNotEmpty(arr, initialSize);
 }
 
-TEST_CASE("DynamicArray(N>0) throws when memory allocation fails", "[DynamicArray]")
+TEST_CASE("DynamicArray::DynamicArray(N>0) throws when memory allocation fails", "[DynamicArray]")
 {
   const size_t sizeTooLargeForTheHeap = 100'000'000'000;
   REQUIRE_THROWS_AS(DynamicArray<int>(sizeTooLargeForTheHeap), std::bad_alloc);
@@ -82,7 +82,7 @@ TEST_CASE_METHOD(NonEmptyArrayFixture, "DynamicArray::at() const throws if the i
   REQUIRE_THROWS_AS(cref.at(cref.size()), std::out_of_range);
 }
 
-TEST_CASE_METHOD(NonEmptyArrayFixture, "operator[] can be used to access all elements of the array", "[DynamicArray]")
+TEST_CASE_METHOD(NonEmptyArrayFixture, "DynamicArray::operator[] can be used to access all elements of the array", "[DynamicArray]")
 {
   for (size_t i = 0; i < arr.size(); ++i)
     arr[i] = i;
