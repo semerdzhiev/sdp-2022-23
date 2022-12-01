@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "homework/hw1/template",
+			"name": "Template for HW1"
+		},
+		{
+			"path": "homework/hw2/template",
+			"name": "Template for HW2"
+		},
+		{
+			"path": "lectures/2022-11-04",
+		},
+		{
+			"path": "lectures/2022-11-11",
+			"name": "2022-11-11: DynamicArray"
+		}
+	]
+}
