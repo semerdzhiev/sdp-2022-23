@@ -17,7 +17,11 @@
 		},
 		{
 			"path": "lectures/2022-11-11",
-			"name": "2022-11-11: DynamicArray"
-		}
+			"name": "2022-11-11: Dynamic Array"
+		},
+		{
+			"path": "lectures/2022-12-23",
+			"name": "2022-12-23: Binary Search Tree (BST)"
+		},
 	]
 }
